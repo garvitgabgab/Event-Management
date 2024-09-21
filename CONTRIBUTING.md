@@ -25,8 +25,8 @@ This project and everyone participating in it are governed by the Code of Conduc
 
 If you find a bug, we’d love to hear about it\! Before reporting a bug, please ensure the issue hasn’t already been reported by:
 
-* Checking the [issue tracker](https://github.com/cn10xdev/ECommerce_Product_Page/issues) to see if it exists.  
-* If it’s not listed, [create a new issue](https://github.com/cn10xdev/ECommerce_Product_Page/issues/new). Include details such as:  
+* Checking the [issue tracker](https://github.com/cn10xdev/Event-Management/issues) to see if it exists.  
+* If it’s not listed, [create a new issue](https://github.com/cn10xdev/Event-Management/issues/new). Include details such as:  
   * Steps to reproduce the bug.  
   * What you expected to happen.  
   * What actually happened.  
@@ -49,14 +49,23 @@ Pull Requests (PRs) are welcome\! Before you start working on a major feature, i
 
 1. **Fork the Repository**  
    Fork the repo by clicking the "Fork" button at the top of the project page on GitHub:  
+<<<<<<< HEAD
    * [Open-Source Project E-Commerce Product](https://github.com/cn10xdev/ECommerce_Product_Page)  
+=======
+   * [Open-Source Project Event Management Product](https://github.com/cn10xdev/Event-Management)  
+>>>>>>> 21026ef (Added contributing.md file)
 
 **Clone the Repository**
 
 **In your terminal, run the following command to clone your forked repository:**  
 ```bash
+<<<<<<< HEAD
 git clone https://github.com/YOUR_USERNAME/ECommerce_Product_Page.git
 cd ECommerce_Product_Page
+=======
+git clone https://github.com/YOUR_USERNAME/Event-Management.git 
+cd Event-Management
+>>>>>>> 21026ef (Added contributing.md file)
 ```
 
 2. **Create a Branch**  
@@ -100,6 +109,7 @@ Ensure you have the following installed:
 
 * **Git**  
 * **Node.js**
+<<<<<<< HEAD
 
 ### **Setting Up Locally**
 
@@ -120,6 +130,52 @@ git clone https://github.com/YOUR_USERNAME/ECommerce_Product_Page.git
    npm test
    ```
 
+=======
+* **You also need to have mongodb cluster url and sendgrid api and password**
+
+# Project Setup Guide
+
+## Frontend
+
+1. Navigate to web folder and install dependencies
+
+   ```sh
+   cd web
+   npm i
+   ```
+
+2. Start the react app
+
+   ```sh
+   npm start
+   ```
+
+## Backend
+
+1. Navigate to web folder and install dependencies
+
+   ```sh
+   cd server
+   npm i
+   ```
+
+2. Add .env in the root directory. Here's an example env file for you.
+
+   ```sh
+    MONGO_URL =
+    senderEmail = 
+    senderPass =
+    sendgridKey = 
+   ```
+
+2. Start the backend server
+
+   ```sh
+   npm run dev
+   ```
+
+
+>>>>>>> 21026ef (Added contributing.md file)
 4. You’re all set to start contributing\!
 
 ## **Style Guide**
