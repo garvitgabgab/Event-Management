@@ -1,108 +1,71 @@
-# E-Commerce Product Page
+# Event Management Admin
 
+The admin side of an event mangagement system I built for our college fest with
+the MERN stack.
 
-This is a simple e-commerce product page built using **React**, **JavaScript**, **HTML**, and **CSS**. It provides a learning opportunity for developers by intentionally introducing bugs and challenges that need to be fixed to create a fully functioning prodcut page.
+![overview](assets/overview.gif)
 
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Setup Instructions](#setup-instructions)
-3. [Project Structure](#project-structure)
-4. [Contributing Guidelines](#contributing-guidelines)
-5. [License](#license)
+<details>
+<summary>Click to see images</summary>
+<br>
 
----
+### Login
 
-## Project Overview
+Authentication with sessions
 
-This project simulates an e-commerce product page where users can:
-- View products with details like name, price, and image.
-- Add items to thier shopping cart.
-- Update the quantity of items in the cart.
-  
-However, the project contains **intentional bugs** that provide a good learning opportunity for new developers. Debugging these will hlep you improve your problem-solving, DOM manipulation, and responsive desgn skills.
+![login page](assets/login.png)
 
----
+### Users
 
-## Setup Instructions
+Users page gives an overview of all the users registered. We can search and add
+users. A report of all the students as a CSV can also be generated.
 
-### Prerequisites:
-- Node.js and npm installed. If you don't have them, download and install [Node.js](https://nodejs.org/).
+![users page](assets/users.png)
 
-### Steps:
-1. Fork [this](https://github.com/cn10xdev/ECommerce_Product_Page) repository.
+![user modal](assets/user_modal.png)
 
-2. Clone the forked repository:
-    ```bash
-    git clone https://github.com/<your-username>/ecommerce-product-page.git
-    ```
+![add user](assets/add_user.png)
 
-3. Navigate to the project directory:
-    ```bash
-    cd ecommerce-product-page
-    ```
+### Events
 
-4. Create a new branch:
-    ```bash
-    git checkout -b <your_branch_name>
-    ```
+Events page contains all the events filtered by day. We can add new events here,
+edit the existing ones or generate reports for each event.
 
-5. Install the required dependencies:
-    ```bash
-    npm install
-    ```
+![events page](assets/events.png)
 
-6. Start the development server:
-    ```bash
-    npm start
-    ```
-    This will run the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![edit event](assets/event_modal.png)
 
-7. Make changes.
+![add event](assets/add_event.png)
 
-9. Stage your changes and commit:
-    ```bash
-    git add .
-    git commit -m "<your_commit_message>"
-    ```
+### Payments
 
-10. Push your local commits to the remote repo:
-    ```bash
-    git push -u origin <your_branch_name>
-    ```
+A list of all the payments made is show on the payments page. We can search
+these payments based on the user's roll number or the username of the admin
+who registered the payement.
 
-11. Create a `Pull-Request` to develop!
+![payments](assets/payments.png)
 
----
+</details>
 
-## Project Structure
+## Web
 
-```plaintext
-ecommerce-product-page/
-│
-├── public/
-│   ├── index.html          # HTML template for the app
-│
-├── src/
-│   ├── components/
-│   │   ├── ProductCard.js   # Component for displaying a single product
-│   │   ├── Cart.js          # Component for displaying the shopping cart
-│   │
-│   ├── App.js               # Main app component
-│   ├── index.js             # Entry piont for the app
-│   ├── styles.css           # Styling for the components
-│
-├── package.json             # Project configuration and dependencies
-└── README.md                # Documentation for the project
+- `react` as the front end framework
+- `chakra-ui` a component library
+- `react-icons` for icons
+- `swr` for data fetching
+- `downloadjs` to trigger downloads
 
-```
----
+## Server
 
-## Contributing Guidelines
-
-Kindly follow [CONTRIBUTING.md](https://github.com/cn10xdev/ECommerce_Product_Page/blob/main/CONTRIBUTING.md) for contributing to the repo.
-
-## License
-
-This project is licensed under the MIT License. You are free to use, modify, and distribute this code.
-
----
+- `express` server
+  - `express-sessions` for managing sessions
+  - `connect-mongo` to store the sessions in the database
+- `mongodb` as database
+  - `mongoose` ODM
+  - `validator` for validation
+  - `faker` for seeding the database
+- Others
+  - `argon2` for hashing
+  - `pdf-creator-node` for generating reports
+  - `rword` for generating passowrds
+  - `nodemailer` for sending mails
